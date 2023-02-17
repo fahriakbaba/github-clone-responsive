@@ -1,0 +1,59 @@
+/*reset in CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*colors*/
+$colors: (
+    "silver":#C0C0C0,
+    "gray": #808080,
+    "lime": #00FF00,
+    "green": #008000,
+    "darkRed": #800000,
+    "red": #FF0000,
+    "black": #000,
+    "githubDark": #24292F,
+    "githubWhite": #fff,
+    "blue": rgb(32, 32, 185)
+);
+
+/*font weights*/
+$fontWeights: (
+    "light": 300,
+    "normal": 500,
+    "bold": 600,
+    "bolder": 800
+);
+
+/*font sizes*/
+$fontSizes: (
+    "x-small": .6rem,
+    "small": .85rem,
+    "normal": 1rem,
+    "large": 1.25rem
+);
+
+/*buttons */
+%btn {
+    padding: 3px 6px;
+    opacity: .8;
+    cursor: pointer;
+    font-weight: map-get($fontWeights, bold);
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid map-get($colors, "silver");
+    transition: opacity .6s ease-in;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+@mixin flexAlign($vertical, $horizantal, $direction) {
+    display: flex;
+    justify-content: $horizantal;
+    align-items: $vertical;
+    flex-direction: $direction;
+}
