@@ -311,12 +311,14 @@ main .content .left-section img {
   main .content .left-section img {
     width: 125px;
     height: 125px;
+    top: 0;
   }
 }
 @media (max-width: 769px) {
   main .content .left-section img {
     width: 125px;
     height: 125px;
+    top: 0;
   }
 }
 main .content .left-section div {
