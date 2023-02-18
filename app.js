@@ -9,6 +9,7 @@ function showStickyLeft() {
         document.querySelector(".sticky-left").style.opacity = "1";
         document.querySelector(".sticky").style.gridTemplateRows = "50px";
         nav.style.display = "none";
+        content.style.marginTop = "0px"
     }
     else {
         document.querySelector(".sticky-left").style.opacity = "0";
