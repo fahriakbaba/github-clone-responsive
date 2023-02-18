@@ -26,7 +26,10 @@ function toggleClick() {
 
 window.addEventListener("resize", () => {
     if(window.innerWidth > 1199) {
-        nav.style.display = "none";
+        nav.style.display = "block";
         content.style.marginTop = "0px"
+    }
+    else {
+        nav.style.display = "none";
     }
 })
