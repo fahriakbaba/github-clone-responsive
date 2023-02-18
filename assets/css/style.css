@@ -59,7 +59,7 @@ header {
 }
 @media (max-width: 769px) {
   header {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 }
 header .navbar-left {
@@ -69,9 +69,52 @@ header .navbar-left {
   align-items: center;
   flex-direction: row;
 }
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 55%;
+  }
+}
+@media (max-width: 769px) {
+  header .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 55%;
+  }
+}
 header .navbar-left i {
   font-size: 2.1rem;
   margin-right: 1rem;
+}
+header .navbar-left #hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-left #hamburger {
+    display: block;
+  }
+}
+@media (max-width: 769px) {
+  header .navbar-left #hamburger {
+    display: block;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-left .fa-github {
+    margin-left: auto;
+  }
+}
+@media (max-width: 769px) {
+  header .navbar-left .fa-github {
+    margin-left: auto;
+  }
 }
 header .navbar-left .text {
   display: flex;
@@ -100,11 +143,31 @@ header .navbar-left .text #search::-moz-placeholder {
 header .navbar-left .text #search::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
+@media (max-width: 769px) {
+  header .navbar-left .text #search {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-left .text #search {
+    display: none;
+  }
+}
 header .navbar-left .text svg {
   position: absolute;
   margin: 2px;
   right: 0;
   color: black;
+}
+@media (max-width: 769px) {
+  header .navbar-left .text svg {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-left .text svg {
+    display: none;
+  }
 }
 header nav {
   margin-right: auto;
@@ -117,6 +180,25 @@ header nav {
 @media (max-width: 769px) {
   header nav {
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    color: #fff;
+    background-color: #24292F;
+    z-index: 20;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header nav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    color: #fff;
+    background-color: #24292F;
+    z-index: 20;
+    width: 100%;
   }
 }
 header nav ul {
@@ -127,12 +209,67 @@ header nav ul {
   flex-direction: row;
   gap: 1rem;
 }
+@media (max-width: 769px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    color: #24292F;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    color: #24292F;
+  }
+}
+@media (max-width: 769px) {
+  header nav ul li {
+    width: 100%;
+    margin-right: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid #808080;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header nav ul li {
+    width: 100%;
+    margin-right: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid #808080;
+  }
+}
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: color 0.4s;
+}
+@media (max-width: 769px) {
+  header nav ul li a {
+    color: #fff;
+  }
+  header nav ul li a:hover {
+    color: #C0C0C0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header nav ul li a {
+    color: #fff;
+  }
+  header nav ul li a:hover {
+    color: #C0C0C0;
+  }
 }
 header .navbar-right {
   display: flex;
@@ -151,6 +288,16 @@ header .navbar-right .image-icon, header .navbar-right .plus-icon {
   flex-direction: row;
   gap: 4px;
   cursor: pointer;
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  header .navbar-right .image-icon, header .navbar-right .plus-icon {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  header .navbar-right .image-icon, header .navbar-right .plus-icon {
+    display: none;
+  }
 }
 header .navbar-right .image-icon img {
   width: 20px;
@@ -185,6 +332,12 @@ main .content .right-section ol li div button, main .content .left-section .cont
 }
 main .content .right-section ol li div button:hover, main .content .left-section .content-btn button:hover, main .sticky .sticky-left button:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 769px) {
+  body {
+    position: relative;
+  }
 }
 
 main {
@@ -312,6 +465,7 @@ main .content .left-section img {
     width: 125px;
     height: 125px;
     top: 0;
+    z-index: 0;
   }
 }
 @media (max-width: 769px) {
@@ -319,6 +473,7 @@ main .content .left-section img {
     width: 125px;
     height: 125px;
     top: 0;
+    z-index: 0;
   }
 }
 main .content .left-section div {

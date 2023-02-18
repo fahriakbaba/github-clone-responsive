@@ -1,6 +1,12 @@
 @import "./variables";
 @import "./mediaQueries";
 
+body {
+    @include mobileAndTablet {
+        position: relative;
+    }
+}
+
 main {
     min-height: 150vh;
     .sticky {
@@ -119,11 +125,13 @@ main {
                     width: 125px;
                     height: 125px;
                     top: 0;
+                    z-index: 0;
                 }
                 @include mobileAndTablet {
                     width: 125px;
                     height: 125px;
                     top: 0;
+                    z-index: 0;
                 }
                 border-radius: 50%;
                 box-shadow: 2px 2px 3px map-get($colors, "silver");
