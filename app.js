@@ -14,6 +14,9 @@ function showStickyLeft() {
     else {
         document.querySelector(".sticky-left").style.opacity = "0";
         document.querySelector(".sticky").style.gridTemplateRows = "4.2rem";
+        if (window.innerWidth > 1199) {
+            nav.style.display = "block";
+        }
     }
 }
 

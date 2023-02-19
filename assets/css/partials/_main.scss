@@ -13,6 +13,7 @@ main {
         @include laptop {
             overflow: scroll;
             width: 100vw;
+            gap: .5rem;
         }
         @include mobileAndTablet {
             overflow: scroll;
@@ -36,6 +37,9 @@ main {
             @include flexAlign(center, flex-start, row);
             gap: .5rem;
             height: 49px;
+            @include mobileAndTablet {
+                display: none;
+            }
 
             img {
                 width: 20px;
@@ -63,9 +67,15 @@ main {
                     font-size: map-get($fontSizes, small);
                     padding: 9px;
                     transition: all .6s;
+                    @include mobileAndTablet {
+                        padding: 0;
+                    }
 
                     &:first-child {
                         border-bottom: 2px solid  orangered;
+                        @include mobileAndTablet {
+                            border-bottom: none;
+                        }
                     }
 
                     a {
@@ -75,6 +85,7 @@ main {
                         text-decoration: none;
                         border-radius: 4px;
                         padding: .35rem .5rem;
+                        
                         svg {
                             height: 1rem;
                             fill: rgb(90, 89, 89);
